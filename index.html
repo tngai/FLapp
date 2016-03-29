@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+  <meta charset='utf-8'> 
+  <!-- Style -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- APIs -->
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&sensor=false"></script>
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- Angular Fire -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+  <!-- Dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+  <!-- Main App -->
+  <script src="./scripts/app.js"></script>
+  <!-- Directives -->
+  <script src="./scripts/directives/mapDirective.js"></script>
+  <!-- Factories -->
+  <script src="./scripts/factories/geolocation.js"></script>
+  <script src="./scripts/factories/dataService.js"></script>
+
+  <!-- Controllers -->
+  <script src="./scripts/controllers/HomeController.js"></script>
+  <script src="./scripts/controllers/aboutController.js"></script>
+  <script src="./scripts/controllers/FoodTruckOwnerController.js"></script>
+  <script src="./scripts/controllers/mapPickerController.js"></script>
+  <script src="./scripts/controllers/oneFoodTruck.js"></script>
+  
+  <title>Maps</title>
+</head>
+<body >
+ 
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="home">FLapp</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="foodTrucks">Available food trucks</a></li>
+    </ul>
+    <ul class="navbar-header nav navbar-nav pull-right">
+        <li><a ui-sref="foodTruckOwner">Food Truck Owner?</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <div ui-view></div>
+</div> 
+</body>
+</html>
+

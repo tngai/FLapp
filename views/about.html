@@ -1,0 +1,18 @@
+  <input id="pInput" ng-model="truckSearch" type="text" placeholder="Search Box">
+
+<div class="table-responsive"> 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="info" ng-repeat="ft in fTrucks | filter:truckSearch" ng-click=FTLocation(ft)>
+        <td>{{ft.name}}</td>
+        <td>{{ft.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
